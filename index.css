@@ -1,0 +1,84 @@
+@import url("main.css");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    background-color: #183569;
+    font-size: 2rem;
+}
+
+@keyframes typing1 {
+    0% {
+        width: 0;
+    }
+    40% {
+        width: 14ch; /* "Data Scientist" */
+    }
+    50% {
+        width: 0; /* Backspace "Data Scientist" */
+    }
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes typing2 {
+    0% {
+        width: 0;
+    }
+    40% {
+        width: 16ch; /* "Web Developer" */
+    }
+    50% {
+        width: 0; /* Backspace "Web Developer" */
+    }
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: rgb(89, 168, 119);
+    }
+}
+
+.job {
+    overflow: hidden;
+    border-right: .15em solid rgb(116, 88, 37);
+    white-space: nowrap;
+    color: rgb(14, 145, 14);
+    display: inline-block;
+    width: 0;
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 1.5;
+    vertical-align: middle;
+    visibility: hidden; /* Start hidden */
+}
+
+.job1 {
+    animation: typing1 8s steps(20) infinite, blink-caret 0.9s step-end infinite;
+    visibility: visible; /* Make job1 visible */
+}
+
+.job2 {
+    animation: typing2 8s steps(20) infinite 8s, blink-caret 0.9s step-end infinite 8s;
+    visibility: hidden; /* Hide job2 initially */
+}
+
+/* Show the second job (Web Developer) after the first job finishes typing */
+.job2.visible {
+    visibility: visible;
+}
