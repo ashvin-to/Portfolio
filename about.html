@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <style>
+        @import url("main.css");
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+            justify-self: center;
+            margin-top: 150px;
+            margin-bottom: 50px;
+            font-size: 2.5rem;
+            color: #b4adad;
+        }
+        section {
+            display: flex;
+            margin-top: 50px;
+        }
+        .about {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            background-color: #183569;
+            font-size: 2rem;
+        }
+        .about p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        .about span {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #333;
+        }
+        .about ul {
+            margin-top: 10px;
+            list-style: none;
+        }
+        .about ul li {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+        <a class="index" href="index.html">Ashvin Singh</a>
+        <ul class="nav-links">
+            <li><a class="nav-link" href="home.html">Home</a></li>
+            <li><a class="nav-link" href="about.html">About Me</a></li>
+            <li><a class="nav-link" href="project.html">Projects</a></li>
+            <li><a class="nav-link" href="contact.html">Contact</a></li>
+            <li><a class="nav-link" href="certficate.html">Certificate</a></li>
+        </ul>
+    </nav>
+    <section class="about">
+        <div >
+            <h1>About Me</h1>
+            <p>Hi people, I am <span style="color: green;
+            font-weight: 700;">Ashvin Singh</span>from Prayagraj, India. Currently I'm doing B.Tech in <span style="color: green;
+            font-weight: 700;">Artificial Intelligence and Machine Learning </span> from VIT Bhopal.</p>
+
+            <span>Apart from development, I love to:-</span>
+            <ul>
+                <li>Travel</li>
+                <li>Gym</li>
+                <li>Camping</li>
+                <li>Spending time with family </li>
+            </ul>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

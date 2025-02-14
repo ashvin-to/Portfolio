@@ -1,0 +1,40 @@
+@import url("main.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    background-color: #183569;
+    font-size: 2rem;
+}
+
+.job {
+    overflow: hidden;
+    border-right: .15em solid rgb(116, 88, 37);
+    white-space: nowrap;
+    color: rgb(14, 145, 14);
+    display: inline-block;
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 1.5;
+    vertical-align: middle;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    background-color: #183569;
+    color: antiquewhite;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
