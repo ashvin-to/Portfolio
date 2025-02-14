@@ -18,6 +18,9 @@
     margin-left: 10px;
     margin-right: 10px;
 }
+.separator {
+    margin: 0 10px;
+}
 
 ul {
     list-style: none;
@@ -90,6 +93,13 @@ li {
 
     .nav-links.active {
         display: flex;
+    }
+    .index{
+        display: flex;
+        
+    }
+    .separator{
+        display: none;
     }
 }
 
