@@ -1,51 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html class="hydrated" lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashvin Singh</title>
+    <link rel="icon" type="image/png" href="fav.png">
     <link rel="stylesheet" href="index.css">
-    <title>Portfolio | Home</title>
 </head>
-
-<body>
-    <nav class="navbar">
-        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
-        <a class="index" href="index.html">Ashvin Singh <span class="separator">|</span>Portfolio</a>
-        <ul class="nav-links">
-            <li><a class="nav-link" href="home.html">Home</a></li>
-            <li><a class="nav-link" href="about.html">About Me</a></li>
-            <li><a class="nav-link" href="project.html">Projects</a></li>
-            <li><a class="nav-link" href="contact.html">Contact</a></li>
-            <li><a class="nav-link" href="certificate.html">Certificate</a></li> 
-        </ul>
-    </nav>
-    <div class="home-container">
-        <section>
-            Hi <br>
-            <p>I'm <span class="name">Ashvin Singh</span><br></p>
-            <div class="job">I'm <span class="typing"></span></div>
-        </section>
+<body class="body-wrap vsc-initialized">
+    <div class="intro">
+        <div class="intro-text">
+          <h2 class="hide">
+            <span class="text" style="transform: translate(0px, 0%);">Creating innovations</span>
+          </h2>
+          <h2 class="hide">
+            <span class="text" style="transform: translate(0px, 0%);">For Everyday</span>
+          </h2>
+          <h2 class="hide">
+            <span class="text" style="transform: translate(0px, 0%);">people.</span>
+          </h2>
+        </div>
+        <button class="intro-btn" id="exploreBtn">
+            <a>EXPLORE</a>
+        </button>
+        <div class="cursor-circle spotlight"></div>
     </div>
-    <footer>
-        <p>&copy; 2021 Ashvin Singh</p>
-    </footer>
-
-    <script src="text.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const exampleText = ['Data Scientist!', 'Web Developer!', 'Software Engineer!'];
-            const exampleTyping = new AutoTyping('.typing', exampleText, {
-                typeSpeed: 50,
-                deleteSpeed: 50,
-                waitBeforeDelete: 800,
-                waitBetweenWords: 500,
-            });
-            exampleTyping.start();
-        });
-    </script>
-    
-    <script src="script.js"></script>
+    <script src="index.js"></script>
 </body>
-
 </html>

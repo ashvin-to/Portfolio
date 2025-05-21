@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashvin Singh - Resume</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            width: 100%;
+            margin: 90px auto 20px auto;
+            background: #fff;
+            padding: 20px 16px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 1.5px solid #007BFF;
+            padding-bottom: 8px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2em;
+            color: #007BFF;
+        }
+        .header a {
+            color: #007BFF;
+        }
+        .header p {
+            margin: 3px 0;
+            font-size: 0.95em;
+        }
+        .section {
+            margin: 10px 0;
+        }
+        .section h2 {
+            font-size: 1.4em;
+            color: #007BFF;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 3px;
+            margin-bottom: 5px;
+        }
+        .section p, .section ul {
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+        .section ul {
+            padding-left: 15px;
+            margin: 5px 0;
+        }
+        .section ul li {
+            margin-bottom: 5px;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 8px;
+        }
+        .project-item {
+            margin-bottom: 10px;
+        }
+        .project-item h4 {
+            margin: 0;
+            font-size: 1.1em;
+        }
+        .button-container {
+            max-width: 900px;
+            margin: 10px auto;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .download-btn, .hire-btn {
+            padding: 8px 15px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 0.9em;
+            cursor: pointer;
+            text-align: center;
+            width: fit-content;
+        }
+        .download-btn:hover {
+            background-color: #0056b3;
+        }
+        .hire-btn {
+            background-color: #28a745;
+        }
+        .hire-btn:hover {
+            background-color: #218838;
+        }
+        @media (max-width: 600px) {
+            .container {
+                margin: 70px 5px 10px 5px;
+                padding: 10px 5px;
+            }
+            .header h1 {
+                font-size: 1.8em;
+            }
+            .header p {
+                font-size: 0.85em;
+            }
+            .section h2 {
+                font-size: 1.2em;
+            }
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            .button-container {
+                flex-direction: column;
+                gap: 8px;
+            }
+            .download-btn, .hire-btn {
+                width: 100%;
+            }
+        }
+        /* Ensure content fits on one page for PDF */
+        @media print {
+            .container {
+                margin: 0;
+                padding: 10px;
+                box-shadow: none;
+            }
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+        <a class="index" href="index.html">
+            <img src="fav.png" alt="Ashvin Singh Portfolio" class="logo">
+        </a>
+        <ul class="nav-links">
+            <li><a class="nav-link" href="home.html">🏠 Home</a></li>
+            <li><a class="nav-link" href="about.html">🙋‍♂️ About Me</a></li>
+            <li><a class="nav-link" href="project.html">📁 Projects</a></li>
+            <li><a class="nav-link" href="certificate.html">📜 Certificates</a></li>
+            <li><a class="nav-link" href="resume.html">📄 Resume</a></li>
+            <li><a class="nav-link" href="contact.html">✉️ Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container" id="resume">
+        <div class="header">
+            <h1>Ashvin Singh</h1>
+            <p>Entry-Level Data Scientist Portfolio</p>
+            <p>Prayagraj, UP, India | +917307413568 | singhashvin34@gmail.com</p>
+            <p>
+                <a href="https://www.linkedin.com/in/ashvin-singh" target="_blank">LinkedIn</a> | 
+                <a href="https://www.kaggle.com/ashvinsingh" target="_blank">Kaggle</a> | 
+                <a href="https://www.github.com/ashvin-to" target="_blank">GitHub</a>
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>About Me</h2>
+            <p>Second-year B.Tech student specializing in AI and Machine Learning, with a passion for leveraging data science to solve real-world problems like counterfeit product detection. Proficient in building machine learning models using Python and TensorFlow, with hands-on experience in projects achieving up to 90% accuracy. Skilled in web development and data visualization, I aim to contribute innovative solutions to data-driven challenges while continuously enhancing my expertise through practical applications and certifications.</p>
+        </div>
+
+        <div class="section">
+            <h2>Education</h2>
+            <p><strong>VIT Bhopal University</strong> - B.Tech in Computer Science & Engineering (AI & ML)</p>
+            <p>Expected Graduation: August 2027 | Current CGPA: 7.94/10</p>
+            <p>Class 10: 91% | Class 12: 77%</p>
+        </div>
+
+        <div class="section">
+            <h2>Certifications</h2>
+            <ul>
+                <li>Coursera: [Certificate Name, e.g., Machine Learning by Stanford University] - [Completion Year, e.g., 2025]</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div>
+                    <strong>Data Science & ML:</strong> Python, Scikit-Learn, TensorFlow, Pandas, Seaborn
+                </div>
+                <div>
+                    <strong>Programming:</strong> C++, C
+                </div>
+                <div>
+                    <strong>Web Development:</strong> HTML, CSS, JavaScript
+                </div>
+                <div>
+                    <strong>Tools:</strong> GitHub, Visual Studio, Replit
+                </div>
+                <div>
+                    <strong>Concepts:</strong> Data Structures & Algorithms, OOP, DBMS, Version Control
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Work Experience</h2>
+            <p><strong>Core Member, College Tech Club</strong> | VIT Bhopal University | 2024 - Present</p>
+            <ul>
+                <li>Organized a hackathon with 50+ participants, designing Figma-based website challenges to foster responsive web development skills.</li>
+                <li>Developed and provided Figma prototypes, evaluated 20+ participant submissions for responsiveness and design fidelity, and assigned scores to determine winners.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Projects</h2>
+            <div class="project-item">
+                <h4>Fake Product Detection</h4>
+                <p>Developed a machine learning model using Convolutional Neural Networks to classify product images as genuine or counterfeit, achieving 70% accuracy on a dataset of 1,000 images.</p>
+                <ul>
+                    <li><strong>Technologies:</strong> Python, TensorFlow, CNN</li>
+                    <li><strong>GitHub:</strong> <a href="https://github.com/ashvinsingh/fake-product-detection" target="_blank">View Project</a></li>
+                </ul>
+            </div>
+            <div class="project-item">
+                <h4>Snake Game</h4>
+                <p>Built a responsive snake game with keyboard and touch controls, optimized for both desktop and mobile devices.</p>
+                <ul>
+                    <li><strong>Technologies:</strong> HTML, CSS, JavaScript</li>
+                    <li><strong>GitHub:</strong> <a href="https://github.com/ashvinsingh/snake-game" target="_blank">View Project</a></li>
+                </ul>
+            </div>
+            <div class="project-item">
+                <h4>Movie Recommendation System</h4>
+                <p>Created a recommendation engine using matrix factorization, achieving 90% accuracy in predicting user preferences on a MovieLens dataset.</p>
+                <ul>
+                    <li><strong>Technologies:</strong> Python, Matrix Factorization</li>
+                    <li><strong>GitHub:</strong> <a href="https://github.com/ashvinsingh/movie-recommendation" target="_blank">View Project</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="button-container">
+        <button class="download-btn" onclick="downloadResume()">Download Resume as PDF</button>
+        <a href="mailto:singhashvin34@gmail.com" class="hire-btn">Hire Me</a>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Function to download resume as PDF
+        function downloadResume() {
+            const element = document.getElementById('resume');
+            const opt = {
+                margin: [0.3, 0.3, 0.3, 0.3],
+                filename: 'Ashvin_Singh_Resume.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2, useCORS: true },
+                jsPDF: { 
+                    unit: 'in', 
+                    format: 'letter', 
+                    orientation: 'portrait',
+                    compress: true
+                },
+                pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+            };
+            html2pdf().set(opt).from(element).toContainer().toCanvas().toPdf().save();
+        }
+    </script>
+</body>
+</html>

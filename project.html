@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="fav.png">
-    <link rel="stylesheet" href="about.css">
-    <title>Portfolio | About</title>
+    <link rel="stylesheet" href="project.css">
+    <title>Portfolio | Projects</title>
 </head>
 <body>
     <nav class="navbar">
@@ -22,29 +21,19 @@
             <li><a class="nav-link" href="contact.html">✉️ Contact</a></li>
         </ul>
     </nav>
-    <div class="about-container">
-        <section>
-            <h1>About Me</h1>
-            <p>Hi people, I am <span style="color: #90a8cf; font-weight: 700;">Ashvin Singh</span> from Prayagraj, India. Currently I'm doing B.Tech in <span style="color: #90a8cf; font-weight: 700;">Artificial Intelligence and Machine Learning </span> from VIT Bhopal.</p>
-
-            <p>Apart from work, I love to:-</p>
-            <ul>
-                <li>Travel</li>
-                <!-- <li>Gym</li> -->
-                <li>Coding</li>
-                <li>Camping</li>
-                <li>Spending time with family</li>
-                <li>Reading</li>
-            </ul>
+    <div class="project-container">
+        <section class="project-container-section">
+            <h1>My Projects</h1>
+            <!-- <p class="projects">Build a simple calculator</p> -->
         </section>
     </div>
     <footer>
         <p>&copy; <span id="current-year"></span> Ashvin Singh</p>
     </footer>
 
+    <script src="script.js"></script>
     <script>
         document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>
-    <script src="script.js"></script>
 </body>
 </html>

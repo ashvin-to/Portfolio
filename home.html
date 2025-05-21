@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="fav.png">
-    <link rel="stylesheet" href="about.css">
-    <title>Portfolio | About</title>
+    <link rel="stylesheet" href="home.css">
+    <title>Portfolio | Home</title>
 </head>
-<body>
+
+<body style="overflow: hidden;">
     <nav class="navbar">
         <div class="menu-toggle" id="menu-toggle">&#9776;</div>
         <a class="index" href="index.html">
@@ -22,29 +24,34 @@
             <li><a class="nav-link" href="contact.html">✉️ Contact</a></li>
         </ul>
     </nav>
-    <div class="about-container">
+    <div class="home-container">
         <section>
-            <h1>About Me</h1>
-            <p>Hi people, I am <span style="color: #90a8cf; font-weight: 700;">Ashvin Singh</span> from Prayagraj, India. Currently I'm doing B.Tech in <span style="color: #90a8cf; font-weight: 700;">Artificial Intelligence and Machine Learning </span> from VIT Bhopal.</p>
-
-            <p>Apart from work, I love to:-</p>
-            <ul>
-                <li>Travel</li>
-                <!-- <li>Gym</li> -->
-                <li>Coding</li>
-                <li>Camping</li>
-                <li>Spending time with family</li>
-                <li>Reading</li>
-            </ul>
+            <h1>Hi</h1>
+            <p>I'm <span class="name">Ashvin Singh</span></p>
+            <div class="job">I'm <span class="typing"></span></div>
         </section>
     </div>
     <footer>
         <p>&copy; <span id="current-year"></span> Ashvin Singh</p>
     </footer>
-
-    <script>
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-    </script>
+    
+    <script src="text.js"></script>
     <script src="script.js"></script>
+    <script>
+        // Update copyright year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const exampleText = ['Data Scientist!', 'Web Developer!', 'Software Engineer!', 'Learner!'];
+            const exampleTyping = new AutoTyping('.typing', exampleText, {
+                typeSpeed: 50,
+                deleteSpeed: 50,
+                waitBeforeDelete: 800,
+                waitBetweenWords: 500,
+            });
+            exampleTyping.start();
+        });
+    </script>
 </body>
+
 </html>

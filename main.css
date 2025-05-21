@@ -1,14 +1,36 @@
+:root {
+    --white: #fff;
+}
+
+html, body {
+    height: 100%;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #183659;
+}
+.main-content {
+    flex: 1;
+}
+
 .navbar {
     display: flex;
     align-items: center;
-    justify-content:flex-end;
+    justify-content:space-between;
     width: 100%;
     height: 70px;
     padding: 0 50px;
-    background-color: #183569;
+    background-color: #183659;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.76);
     position: fixed;
     top: 0;
+}
+
+.navbar .logo {
+    height: 40px;
+    width: auto;
 }
 
 .index {
@@ -17,7 +39,13 @@
     font-size: 20px;
     margin-left: 10px;
     margin-right: 10px;
+    transition: transform 0.3s ease;
 }
+
+.index:hover {
+    transform: scale(1.05);
+}
+
 .separator {
     margin: 0 10px;
 }
@@ -27,7 +55,6 @@ ul {
     display: flex;
     margin: 0;
     padding: 0;
-    
 }
 
 li {
@@ -37,6 +64,39 @@ li {
 .nav-link {
     text-decoration: none;
     color: antiquewhite;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: antiquewhite;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link.active {
+    color: #90a8cf;
+}
+
+.nav-link.active::after {
+    width: 100%;
+    background-color: #90a8cf;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
 }
 
 .menu-toggle {
@@ -45,6 +105,11 @@ li {
     cursor: pointer;
     margin-right: 10px;  
     align-self: center;
+    transition: color 0.3s ease;
+}
+
+.menu-toggle:hover {
+    color: #90a8cf;
 }
 
 .nav-links {
@@ -83,7 +148,7 @@ li {
         position: absolute;
         top: 70px;
         left: 0;
-        background-color: #c2c5ca;
+        background-color: #90a8cf;
     }
 
     .nav-links li {
@@ -96,7 +161,6 @@ li {
     }
     .index{
         display: flex;
-        
     }
     .separator{
         display: none;

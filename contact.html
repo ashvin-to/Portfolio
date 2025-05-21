@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="fav.png" />
+    <link rel="stylesheet" href="certificate.css" />
+    <title>Portfolio | Certificates</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+        <a class="index" href="index.html">
+            <img src="fav.png" alt="Ashvin Singh Portfolio" class="logo" />
+        </a>
+        <ul class="nav-links">
+            <li><a class="nav-link" href="home.html">🏠 Home</a></li>
+            <li><a class="nav-link" href="about.html">🙋‍♂️ About Me</a></li>
+            <li><a class="nav-link" href="project.html">📁 Projects</a></li>
+            <li><a class="nav-link" href="certificate.html">📜 Certificates</a></li>
+            <li><a class="nav-link" href="resume.html">📄 Resume</a></li>
+            <li><a class="nav-link" href="contact.html">✉️ Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-container">
+        <div class="certificate-container">
+            <h1>My Certificates</h1>
+
+            <div class="carousel-wrapper" id="carousel-wrapper">
+                <button class="carousel-btn left" onclick="showPrev()">&#8592;</button>
+
+                <div class="carousel" id="certificate-slider">
+                    <div class="certificate-wrapper">
+                        <img class="certificate"
+                            src="https://udemy-certificate.s3.amazonaws.com/image/UC-6e77d1e4-62fa-48b3-ac9d-84823d12c496.jpg?v=1714657244000"
+                            alt="Certificate 1" />
+                    </div>
+                    <div class="certificate-wrapper">
+                        <img class="certificate"
+                            src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~QMNP43CXU9Q1/CERTIFICATE_LANDING_PAGE~QMNP43CXU9Q1.jpeg"
+                            alt="Certificate 2" />
+                    </div>
+                    <!-- Add more certificate-wrapper blocks as needed -->
+                </div>
+                <button class="carousel-btn right" onclick="showNext()">&#8594;</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> Ashvin Singh</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="certificate.js"></script>
+</body>
+
+</html>
