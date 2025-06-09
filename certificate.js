@@ -6,6 +6,12 @@ const certificates = document.querySelectorAll(".certificate");
 const slider = document.getElementById("certificate-slider");
 const total = wrappers.length;
 
+// Set the width of the slider based on the number of certificates
+slider.style.width = `${total * 100}%`;
+
+// Log the calculated slider width to the console for debugging
+console.log('Certificate Slider Width:', slider.style.width);
+
 function showSlide(i) {
   wrappers.forEach((wrap, idx) => {
     wrap.style.transform = `translateX(${100 * (idx - i)}%)`;

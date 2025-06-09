@@ -48,8 +48,8 @@ body {
 
 .carousel {
   position: relative;
-  width: 80%;
-  max-width: 700px;
+  width: 90%;
+  max-width: 1000px;
   overflow: hidden;
   border-radius: 20px;
 }
@@ -57,17 +57,20 @@ body {
 .certificate-slider {
   display: flex;
   transition: transform 0.6s ease-in-out;
+  width: 100%;
 }
 
 .certificate-wrapper {
-  min-width: 100%;
+  min-width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 0.5s ease;
-  transform: rotate(-6deg) scale(0.9);
-  opacity: 0.8;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  transform: rotate(0deg) scale(1);
+  opacity: 1;
   pointer-events: auto;
+  box-sizing: border-box;
+  padding: 0;
 }
 
 .certificate-wrapper.active {
@@ -77,11 +80,12 @@ body {
 }
 
 .certificate {
-  max-width: 90%;
+  width: 100%;
   height: auto;
   border-radius: 20px;
   cursor: pointer;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
+  object-fit: contain;
 }
 
 @media (hover: hover) {
